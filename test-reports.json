@@ -2,19 +2,19 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 1,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-09-29T10:33:44.471Z",
-    "end": "2023-09-29T10:33:44.487Z",
-    "duration": 16
+    "failures": 0,
+    "start": "2023-09-29T12:11:34.780Z",
+    "end": "2023-09-29T12:11:34.795Z",
+    "duration": 15
   },
   "tests": [
     {
       "title": "Login test with right credentials",
       "fullTitle": "Users Login test with right credentials",
       "file": "/Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/tests/app.test.js",
-      "duration": 12,
+      "duration": 13,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -23,42 +23,29 @@
       "title": "Login test with invalid credentials",
       "fullTitle": "Users Login test with invalid credentials",
       "file": "/Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/tests/app.test.js",
-      "duration": 3,
+      "duration": 2,
       "currentRetry": 0,
-      "err": {
-        "message": "expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 400",
-        "showDiff": true,
-        "actual": "400",
-        "expected": "200",
-        "stack": "AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 400\n    at /Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/tests/app.test.js:43:31\n    at Request.callback (node_modules/superagent/lib/node/index.js:857:12)\n    at /Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/node_modules/superagent/lib/node/index.js:1070:18\n    at IncomingMessage.<anonymous> (node_modules/superagent/lib/node/parsers/json.js:21:7)\n    at IncomingMessage.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1376:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
-        "uncaught": true
-      }
+      "speed": "fast",
+      "err": {}
     }
   ],
   "pending": [],
-  "failures": [
-    {
-      "title": "Login test with invalid credentials",
-      "fullTitle": "Users Login test with invalid credentials",
-      "file": "/Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/tests/app.test.js",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 400",
-        "showDiff": true,
-        "actual": "400",
-        "expected": "200",
-        "stack": "AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 400\n    at /Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/tests/app.test.js:43:31\n    at Request.callback (node_modules/superagent/lib/node/index.js:857:12)\n    at /Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/node_modules/superagent/lib/node/index.js:1070:18\n    at IncomingMessage.<anonymous> (node_modules/superagent/lib/node/parsers/json.js:21:7)\n    at IncomingMessage.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1376:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
-        "uncaught": true
-      }
-    }
-  ],
+  "failures": [],
   "passes": [
     {
       "title": "Login test with right credentials",
       "fullTitle": "Users Login test with right credentials",
       "file": "/Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/tests/app.test.js",
-      "duration": 12,
+      "duration": 13,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "Login test with invalid credentials",
+      "fullTitle": "Users Login test with invalid credentials",
+      "file": "/Users/ganeshbssr/Documents/Playground/github-actions/conditional-workflow/tests/app.test.js",
+      "duration": 2,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
