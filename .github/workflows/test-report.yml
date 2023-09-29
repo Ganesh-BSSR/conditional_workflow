@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Test-artifact-Name
         id: step-1
-        run: echo "fileName=$(date '+%d-%m-%Y-%H-%M\-%S')-test-report.json" >> $GITHUB_OUTPUT
+        run: echo "fileName=test-report.json" >> $GITHUB_OUTPUT
       - name: Print File Name
         run: echo ${{steps.step-1.outputs.fileName}}
       - name: Get Code
