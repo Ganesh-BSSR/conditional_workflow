@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Test-artifact-Name
         id: step-1
-        run: echo "fileName=$(date '+%d-%m-%Y-%H:%M:%S')-test-report.json" >> $GITHUB_OUTPUT
+        run: echo "fileName=$(date '+%d-%m-%Y-%H-%M\-%S')-test-report.json" >> $GITHUB_OUTPUT
       - name: Print File Name
-        run: echo ${{join(steps.step-1.outputs.*, '\n')}}
+        run: echo ${{steps.step-1.outputs.fileName}}
       - name: Get Code
         uses: actions/checkout@v4
       - name: Install Node
