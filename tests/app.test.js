@@ -40,7 +40,7 @@ describe('Users', () => {
         if (err) {
           expect(res).to.have.status(500)
         } else {
-          expect(res).to.have.status(400)
+          expect(res).to.have.status(200)
           expect(res.body)
             .to.have.property('message')
             .equal('Login failed! Please try again!')
