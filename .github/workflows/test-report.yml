@@ -29,3 +29,13 @@ jobs:
         with:
           name: ${{steps.step-1.outputs.reportFileName}}
           path: test-reports.json
+  deploy-report:
+    needs: test-report-gen
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dowload test report
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{needs.test-report-gen.outputs.reportFileName}}
+      - name: List files
+        run: ls
