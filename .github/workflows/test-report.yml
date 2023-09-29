@@ -27,5 +27,5 @@ jobs:
         # always() command executes irrespective of the failure from the steps above. and the test report file will be downloaded as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{steps.running-test.outputs.reportDate}}-test-report.json
+          name: ${{steps.step-1.outputs.reportDate}}-test-report.json
           path: test-reports.json
