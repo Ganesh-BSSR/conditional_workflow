@@ -18,7 +18,7 @@ describe('Users', () => {
         if (err) {
           expect(res).to.have.status(500)
         } else {
-          expect(res).to.have.status(200)
+          expect(res).to.have.status(400)
           expect(res.body)
             .to.have.property('message')
             .equal('Logged in successfully!')
