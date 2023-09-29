@@ -23,7 +23,7 @@ jobs:
         run: npm run test
       - name: Upload Test File
         # if: failure() && steps.running-test.outcome == 'failure'
-        # if: always()
+        if: always()
         # always() command executes irrespective of the failure from the steps above. and the test report file will be downloaded as artifact
         uses: actions/upload-artifact@v3
         with:
