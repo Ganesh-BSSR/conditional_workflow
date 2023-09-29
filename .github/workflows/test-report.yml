@@ -11,9 +11,9 @@ jobs:
         run: |
           echo "file_name=test-report.json"
           echo "current_time=$(date +"%d-%m-%Y")"
-          echo "fileName=$current_time.$file_name" >> "$GITHUB_OUTPUT"
+          echo "fileName=$current_time.$file_name" >> $GITHUB_OUTPUT
       - name: Print File Name
-        run: echo ${{steps.step-1.outputs.fileName}}
+        run: echo ${{join(steps.step-1.outputs.*, '\n')}}
       - name: Get Code
         uses: actions/checkout@v4
       - name: Install Node
