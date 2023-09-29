@@ -1,0 +1,6 @@
+{
+  "reporter": "json",
+  "reporterOptions": [
+    "output=./test-reports.json"
+  ]
+}
