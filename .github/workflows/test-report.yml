@@ -3,7 +3,17 @@ on: workflow_dispatch
 jobs:
   test-report-gen:
     runs-on: ubuntu-latest
+    outputs:
+      testFileName: ${{steps.step-1.outputs.fileName}}
     steps:
+      - name: Test-artifact-Name
+        id: step-1
+        run: |
+          echo "file_name=test-report.json"
+          echo "current_time=${date +"%F"}"
+          echo "fileName=$current_time.$file_name" >> "$GITHUB_OUTPUT"
+      - name: Print File Name
+        run: echo ${{steps.step-1.outputs.fileName}}
       - name: Get Code
         uses: actions/checkout@v4
       - name: Install Node
@@ -15,7 +25,8 @@ jobs:
         run: npm run test
       - name: Upload Test File
         # if: failure() && steps.running-test.outcome == 'failure'
-        if: always()
+        # if: always()
+        # always() command executes irrespective of the failure from the steps above. and the test report file will be downloaded as artifact
         uses: actions/upload-artifact@v3
         with:
           name: test-report
