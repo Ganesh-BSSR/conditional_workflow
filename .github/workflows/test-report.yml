@@ -3,15 +3,10 @@ on: workflow_dispatch
 jobs:
   test-report-gen:
     runs-on: ubuntu-latest
-    outputs:
-      testFileName: ${{steps.step-1.outputs.fileName}}
     steps:
       - name: Test-artifact-Name
         id: step-1
-        run: |
-          echo "file_name=test-report.json"
-          echo "current_time=$(date +"%d-%m-%Y")"
-          echo "fileName=$current_time.$file_name" >> $GITHUB_OUTPUT
+        run: echo "fileName=$(date '+%d-%m-%Y %H:%M:%S')-test-report.json" >> $GITHUB_OUTPUT
       - name: Print File Name
         run: echo ${{join(steps.step-1.outputs.*, '\n')}}
       - name: Get Code
